@@ -1,12 +1,11 @@
 :root {
-  --color1: rgb(12, 242, 93);
-  --color2: rgb(3, 140, 62);
+  --color1: rgb(242, 119, 12);
+  --color2: rgb(140, 14, 3);
   --color3: rgb(2, 115, 94);
   --color4: rgb(2, 89, 81);
   --color5: rgb(3, 65, 89);
-  --bg-color: rgb(23, 23, 28);
-  --nav-color : rgb(2, 6, 23);
-  --gradient: linear-gradient(180deg, rgba(12,242,93,1) 0%, rgb(1, 25, 34) 100%);
+  --bg-color: rgb(35, 35, 42);
+  --nav-color : rgb(17, 17, 17);
 }
 
 * {
@@ -20,7 +19,7 @@ a {
   color: inherit;
 }
 
-html {font-family: Poppins;}
+html {font-family: Poppins; background-color: var(--bg-color);}
 
  /* FONT  */
 @font-face {
