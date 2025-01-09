@@ -1,0 +1,123 @@
+/* NOM PRENOM EMAIL  */
+#contact-main-container {
+    width: 1596px;
+    height: 797px;
+    margin: 0px auto 0px auto;
+    border-left: 1px solid var(--line-color);
+    border-right: 1px solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+}
+.default-form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 134px;
+    padding: 0px 40px 0px 40px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    gap: 30px;
+    font-size: 1.5rem;
+}
+.default-form input[type="text"],
+.default-form input[type="mail"]{
+    border: none;
+    border-bottom: 1px solid var(--line-color);
+    outline: none;
+}
+
+.form-name-email {
+    display: flex;
+    width: 100%;
+    height: 134px;
+    margin-top: 112px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    background-color: var(--bg-color);
+}
+
+.form-name-email label {
+    color: white;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0px 0px 0px;
+}
+
+
+#mail {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0px 0px 0px;
+}
+
+label {
+    font-family: Barlow-Medium;
+}
+
+/* CHECKBOX */
+#checkbox-why {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    height: 233px;
+    margin-top: 40px;
+}
+
+.checkbox-why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    margin: 0px 348px 0px auto;
+    width: 820px;
+    height: 193px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+#why-contact-ckbox {
+    display: flex;
+    font-size: 1.5rem;
+    padding-bottom: 40px;
+    font-family: Barlow-Medium;
+}
+
+.two-choice {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+}
+
+input {
+    display: inline;
+}
+
+.chk-and-text {
+    display: flex;
+    width: 400px;
+    height: 28px;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    padding-bottom: 24px;
+}
+.chk-and-text2 {
+    display: flex;
+    width: 400px;
+    height: 28px;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+}
+
+.checkmark {
+    background-color: var(--line-color);
+} 

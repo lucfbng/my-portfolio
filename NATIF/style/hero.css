@@ -1,0 +1,114 @@
+#hero-container {
+  border-right: 1px solid var(--line-color);
+  border-left: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--line-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0px 162px 0px 162px;
+  height: 796px;
+  background-image: url(../images/Abstract\ Design-purple.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* H1 + P */
+.hero-item {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 112px;
+  margin-left: 325px;
+  margin-right: 325px;
+  color: white;
+  font-family: Barlow-Regular;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.hero-item h1 span {
+  color: var(--main-color);
+}
+
+.hero-item2 {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 365px;
+  margin-right: 365px;
+  padding: 24px 40px 24px 40px;
+  color: #717172;
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  font-family: Barlow-Regular;
+  font-size: 1.75rem;
+  opacity: 0.8;
+}
+/* Fake button */
+.button-style {
+  /* border:1px solid red; */
+  background-color: #262626;
+  color: white;
+  padding: 12px 14px 12px 14px;
+  border-radius: 8px;
+}
+
+/* BUTTON */
+.hero-item-button {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 13px;
+  color: white;
+  font-family: Barlow-Regular;
+  font-size: 1.2rem;
+}
+
+#hero-work-button {
+  padding: 18px 28px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  font-family: Barlow-Medium;
+  opacity: 0.8;
+}
+#hero-work-button:hover {
+  background-color: #333333;
+}
+
+#hero-cv-button {
+  padding: 18px 28px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  border: 1px solid transparent;
+  color: white;
+  font-family: Barlow-Medium;
+}
+#hero-cv-button:hover {
+  background-color: var(--main-hover-color);
+  border: 1px solid var(--main-color);
+}
+#hero-cv-button:active {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  color: white;
+}
+
+/* HERO TEHCNOLOGIE FAKE BUTTON */
+#techno-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 288px;
+  /* border: 1px solid red; */
+}
+.techno {
+  background-color: var(--bg-color);
+  box-shadow: 0px 2px 4px rgba(80, 35, 255, 0.2);
+  border: 1px solid var(--line-color);
+  padding: 10px 34px;
+  border-radius: 50px;
+  color: white;
+  font-family: Barlow-Medium;
+  font-size: 1.25rem;
+}

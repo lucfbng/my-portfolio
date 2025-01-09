@@ -1,0 +1,37 @@
+#main-hero-container {
+    border-left: 1px solid var(--line-color);
+    border-right: 1px solid var(--line-color);
+    margin: 0px 162px 0px 162px;
+    width: 1596px;
+    height: 797px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+
+#main-hero-container div {
+    display: flex;
+}
+
+.for-o-for {
+    margin-top: 112px;
+    font-family: Barlow-Bold;
+    font-size: 5rem;
+    gap: 10px;
+}
+.projet-not-found {
+    font-family: Barlow-SemiBold;
+    font-size: 2rem;
+}
+
+.joke {
+    margin-top: 20px;
+    font-family: Barlow-Regular;
+    font-size: 1.5rem;
+}
+
+#main-hero-container span {
+    color: var(--main-color);
+}
