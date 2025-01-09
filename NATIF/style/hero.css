@@ -17,9 +17,7 @@
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
-  margin-top: 112px;
-  margin-left: 325px;
-  margin-right: 325px;
+  margin : 112px auto 0px auto; 
   color: white;
   font-family: Barlow-Regular;
   text-align: center;
