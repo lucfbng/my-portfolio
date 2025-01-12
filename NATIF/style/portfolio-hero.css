@@ -1,0 +1,43 @@
+.hero {
+    background-image: url(../images/grid-pattern.svg);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 2px auto 0px auto;
+    height: 700px;
+    align-items: center;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    margin-left: 2%;
+}
+
+.hero-title h1 {
+    font-size: 10rem;
+    font-family: Barlow-SemiBold;
+    background-image: linear-gradient(30deg,rgb(80, 35, 255), rgb(60, 225, 170));
+    color: transparent;
+    background-clip: text;
+}
+
+.hero-title h2 {
+    font-size: 5rem;
+    font-family: Barlow-SemiBold;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.hero-title h3 {
+    font-size: 2rem;
+    font-family: Barlow-SemiBold;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
