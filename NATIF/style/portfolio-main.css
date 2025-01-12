@@ -1,5 +1,99 @@
+* {margin: 0; padding: 0;}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    margin: 0px auto;
+    top: 0;
+    z-index: 99;
+    
+}
+nav {
+    background-color: transparent;
+    height: 100px;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -15px 30px 2px var(--main-color);
+}
+
+nav ul {
+    width: 97%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px auto;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(202, 202, 202);
+}
+
+nav a:hover {
+    color: var(--main-color);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.34);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+/*______________________________________________________________________________________________*/
 .hero {
-    background-image: url(../images/Abstract\ Design-purple.svg);
+    background-image: url(../images/Abstract-Design.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -14,7 +108,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 300px;
     color: white;
     background: transparent;
 }
@@ -22,9 +116,9 @@
 .hero-title h1 {
     font-size: 5rem;
     font-family: Barlow-SemiBold;
-    color: rgb(80, 35, 255);
-    /* color: transparent; */
-    /* background-clip: text; */
+    background: linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%);
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-title h2 {
@@ -42,33 +136,53 @@
 .github-icon {
     display: flex;
     width: 30px;
-    background-color: white;
+    background-color: transparent;
 }
 .git-button {
     display: flex;
     align-items: center;
-    padding: 12px 24px;
+    padding: 12px 40px;
     color: black;
     background-color: white;
     font-family: Barlow-Medium;
     font-size: 1.25rem;
-    border-radius: 15px;
+    border-radius: 100px;
     margin-top: 100px;
     gap: 10px;
     border: 1px solid transparent;
 }
+.git-button:hover {
+    border: 2px solid var(--main-color);
+}
+.parcours-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    min-height: 120px;
+    border-top: 1px solid rgb(190, 255, 0, 0.2);
+    border-bottom: 1px solid rgb(190, 255, 0, 0.2);
+    background-image: url(../images/grid-pattern2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.parcours-section h2 {color: white; background: transparent; font-size: 2rem;}
 
 /* TEST TIMELINE */
-
 .design-section {
+    background-image: url(../images/Abstract-Design-reverse.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: var(--bg-color);
     min-height: 100vh;
-    padding: 100px 0;
-    font-family: Jost;
+    padding: 20px 0;
+    font-family: Barlow-SemiBold;
 }
 
 .design {
@@ -85,28 +199,110 @@
     display: flex;
     flex-direction: column;
     z-index: 0;
+    background-color: transparent;
 }
 
+.timeline-empty{background: transparent;}
+
 .timeline-content {
-    padding: 20px;
-    background: transparent;
+    padding: 10px;
+    background-color: transparent;
     -webkit-box-shadow: 5px 5px 2px 1px #1a1a1a, -5px -5px 2px 1px #242424;
-    box-shadow: 2px 2px 2px 1px #3ce1aa, -2px -2px 2px 1px #5023ff;
+    box-shadow: 1px 1px 2px 1px #43ff00, -1px -1px 2px 1px var(--main-color);
     border-radius: 5px;
     color: white;
     padding: 1.75rem;
     font-family: Barlow-SemiBold;
     transition: 0.4s ease;
     overflow-wrap: break-word !important;
-    margin: 1rem;
+    margin: 0.25rem;
     margin-bottom: 20px;
     border-radius: 6px;
 }
 
+.timeline-component h3 {background: transparent;}
+.timeline-component p {background: transparent;}
+
 .timeline-component {
     margin: 0px 20px 20px 20px;
+    background-color: transparent;
 }
 
+@media screen and (max-width: 1280px){
+    .hero-title {
+        margin-top: 300px;
+        gap: 20px;
+    }
+    .hero-title h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-title h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-title h3 {
+        font-size: 1.5rem;
+    }
+    
+    .github-icon {
+        width: 25px;
+    }
+    .git-button {
+        padding: 10px 32px;
+        font-size: 1rem;
+        margin-top: 50px;
+    }
+    .parcours-section h2 {font-size: 1.5rem;}
+    .timeline-component h3 {font-size: 1rem;}
+    .timeline-component p {font-size: 0.75rem;}
+}
+@media screen and (max-width: 1280px){
+    .hero {
+        background-image: url(../images/Abstract-Design.svg);
+        background-size: 150%;
+    }
+    .design-section {
+        background-image: url(../images/Abstract-Design-reverse.svg);
+        background-size: 150%;
+
+    }
+}
+@media screen and (max-width: 1280px){
+    .hero {
+        background-image: url(../images/Abstract-Design.svg);
+        background-size: 200%;
+    }
+    .design-section {
+        background-image: url(../images/Abstract-Design-reverse.svg);
+        background-size: 200%;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TIMELINE RESPONSIVE*/
 @media screen and (min-width: 768px) {
     .timeline {
         display: grid;
@@ -115,7 +311,7 @@
 
     .timeline-middle {
         position: relative;
-        background-image: linear-gradient(45deg, #5023ff, #5023ff, #3ce1aa);
+        background-image: linear-gradient(45deg, var(--main-color), var(--main-color), #43ff00);
         width: 3px;
         height: 100%;
     }
@@ -131,7 +327,7 @@
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background-image: linear-gradient(45deg, #3CE1AA, #3CE1AA, #3CE1AA);
+        background-image: linear-gradient(45deg, #43ff00, #43ff00, #43ff00);
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
