@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/portfolio-main.css">
-    <link rel="stylesheet" href="./style/portfolio-global.css">
+    <link rel="stylesheet" href="./style/custom.css">
+    <link rel="stylesheet" href="./style/global.css">
     <script src="./ressources/script.js"></script>
     <title>Luc | Portfolio</title>
 </head>
@@ -20,14 +20,14 @@
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></a></li>
                 <li><a href="#">Un Logo</a></li>
-                <li><a href="#">Mon parcour</a></li>
-                <li><a href="#">Mes compétences</a></li>
+                <li><a href="#parcours">Mon parcour</a></li>
+                <li><a href="#skill">Mes compétences</a></li>
                 <li><a href="#">Mes projets</a></li>
             </ul>
             <ul>
                 <li><a href="#">Un Logo</a></li>
-                <li class="hideOnMobile"><a href="#">Mon parcours</a></li>
-                <li class="hideOnMobile"><a href="#">Mes compétences</a></li>
+                <li class="hideOnMobile"><a href="#parcours">Mon parcours</a></li>
+                <li class="hideOnMobile"><a href="#skill">Mes compétences</a></li>
                 <li class="hideOnMobile"><a href="#">Mes projets</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
@@ -44,7 +44,7 @@
             <a class="git-button" href="#"><img class="github-icon" src="./icons/github-icon.svg" alt="github-icon">GitHub</a>
         </div>
     </section>
-    <div class="parcours-section">
+    <div class="parcours-section" id="parcours">
         <h2>Mon parcours</h2>
     </div>
     <section class="design-section">
@@ -54,14 +54,14 @@
                 <div class="timeline-circle"></div>
             </div>
             <div class="timeline-component timeline-content glassm-2">
-                <h3>2016</h3>
-                <h3>CAP Conducteur d'Installation de Production</h3>
-                <p>Some Text</p>
+                <h3 class="timeline-date">2016</h3>
+                <h3 class="timeline-job">CAP Conducteur d'Installation de Production</h3>
+                <p><img class="location-icon" src="./icons/location-green.svg" alt="">Lycée Henri Nominé, Sarreguemines</p>
             </div>
             <div class="timeline-component timeline-content glassm-2">
-                <h3>2018</h3>
-                <h3>BAC PRO Technicien d'usinage en alternance</h3>
-                <p>Some Text</p>
+                <h3 class="timeline-date">2018</h3>
+                <h3 class="timeline-job">BAC PRO Technicien d'usinage en alternance</h3>
+                <p><img class="location-icon" src="./icons/location-green.svg" alt="">CFAI, Henriville</p>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -74,17 +74,17 @@
                 <div class="timeline-circle"></div>
             </div>
             <div class=" timeline-component timeline-content glassm-2">
-                <h3>2019</h3>
-                <h3>Technicien d'usinage</h3>
-                <p>Some Text</p>
+                <h3 class="timeline-date">2019</h3>
+                <h3 class="timeline-job" >Technicien d'usinage</h3>
+                <p><img class="location-icon" src="./icons/location-green.svg" alt="">VWB Gersheim, Allemagne</p>
             </div>
         </div>
         </div>
         <div class="timeline">
             <div class="timeline-component timeline-content">
-                <h3>2021</h3>
-                <h3>Technicien d'usinage</h3>
-                <p>Some Text</p>
+                <h3 class="timeline-date">2021</h3>
+                <h3 class="timeline-job">Technicien d'usinage</h3>
+                <p><img class="location-icon" src="./icons/location-green.svg" alt="">KUHN, Saverne</p>
             </div>
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
@@ -96,15 +96,64 @@
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
-            <div class=" timeline-component timeline-content">
-                <h3>2024</h3>
-                <h3>Formation Dev Web</h3>
-                <p>Some Text</p>
+            <div class="timeline-component timeline-content">
+                <h3 class="timeline-date">2024</h3>
+                <h3 class="timeline-job">Formation Dev Web</h3>
+                <p><img class="location-icon" src="./icons/location-green.svg" alt="">Metz Numeric School</p>
             </div>
         </div>
         </div>
     </section>
-
+    <div class="parcours-section" id="skill">
+        <h2>Mes Compétences</h2>
+    </div>
+    <section class="skill-section">
+        <div class="skill-card">
+            <h2>HARD SKILLS</h2>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">HTML</h3>
+            </div>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/css-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">CSS</h3>
+            </div>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/js-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">JAVASCRIPT</h3>
+            </div>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">TAILWIND</h3>
+            </div>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/bootstrap-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">BOOTSTRAP</h3>
+            </div>
+            <div class="skill-component">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">GIT</h3>
+            </div>
+        </div>
+        <div class="skill-card2">
+            <h2>SOFT SKILLS</h2>
+            <div class="skill-component2">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">ESPRIT D'EQUIPE</h3>
+            </div>
+            <div class="skill-component2">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">AUTONOMIE</h3>
+            </div>
+            <div class="skill-component2">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">ADAPTATION</h3>
+            </div>
+            <div class="skill-component2">
+                <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
+                <h3 class="skill-name">SENS DU DETAIL</h3>
+            </div>
+        </div>
+    </section>
 </body>
-
 </html>

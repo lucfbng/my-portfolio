@@ -1,6 +1,6 @@
 :root {
     /* --main-color: #9eff00; */
-    --main-color: #beff00;
+    --main-color: rgb(190, 255, 0);
     --main-hover-color: rgb(100, 65, 255);
     --secondary-color: #1b1b1b;
     --bg-color: rgb(25, 25, 25);
@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     background-color: var(--bg-color);
 }
 a {

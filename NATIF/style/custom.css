@@ -1,6 +1,4 @@
-* {margin: 0; padding: 0;}
 body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-
 /* NAVBAR */
 header {
     position: fixed;
@@ -92,6 +90,8 @@ nav li:first-child {
     }
 }
 /*______________________________________________________________________________________________*/
+
+/* HERO-SECTION */
 .hero {
     background-image: url(../images/Abstract-Design.svg);
     background-size: contain;
@@ -168,6 +168,7 @@ nav li:first-child {
     background-position: bottom;
 }
 .parcours-section h2 {color: white; background: transparent; font-size: 2rem;}
+/*__________________________________________________________________________________________________________________________*/
 
 /* TEST TIMELINE */
 .design-section {
@@ -181,8 +182,7 @@ nav li:first-child {
     justify-content: center;
     background-color: var(--bg-color);
     min-height: 100vh;
-    padding: 20px 0;
-    font-family: Barlow-SemiBold;
+    padding: 70px 0 50px 0;
 }
 
 .design {
@@ -205,28 +205,131 @@ nav li:first-child {
 .timeline-empty{background: transparent;}
 
 .timeline-content {
-    padding: 10px;
+    margin: 0.25rem;
+    margin-bottom: 20px;
+    padding: 0.5rem 1.75rem 1rem 1.75rem;
     background-color: transparent;
     -webkit-box-shadow: 5px 5px 2px 1px #1a1a1a, -5px -5px 2px 1px #242424;
     box-shadow: 1px 1px 2px 1px #43ff00, -1px -1px 2px 1px var(--main-color);
     border-radius: 5px;
     color: white;
-    padding: 1.75rem;
     font-family: Barlow-SemiBold;
     transition: 0.4s ease;
     overflow-wrap: break-word !important;
-    margin: 0.25rem;
-    margin-bottom: 20px;
-    border-radius: 6px;
 }
-
-.timeline-component h3 {background: transparent;}
-.timeline-component p {background: transparent;}
 
 .timeline-component {
     margin: 0px 20px 20px 20px;
     background-color: transparent;
 }
+
+.timeline-date {font-family: Barlow-ExtraBold; font-size: 3rem; margin-bottom: 1%; background: linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%); background-clip: text; color: transparent;}
+.location-icon {width: 15px; background: transparent; margin-right: 5px;}
+.timeline-job {font-family: Barlow-Medium; background: transparent; margin-bottom: 10px;}
+.timeline-component p {font-family: Barlow-Regular; background: transparent;}
+/*__________________________________________________________________________________________________________________________*/
+
+/* SKILL SECTION */
+.skill-section {
+    background-image: url(../icons/skelleton-with-brain.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px auto 0 auto;
+    max-width: 90%;
+    width: 90%;
+    height: 70vh;
+}
+
+.skill-icon {width: 30px; background: transparent;}
+.skill-name {color: white; background: transparent;}
+.skill-card h2 { color: white; display: flex; justify-content: flex-end; margin-bottom: 15px; text-decoration: underline; text-decoration-color: var(--main-color); text-underline-offset: 5px;}
+.skill-card2 h2 {color: white; margin-bottom: 15px; text-decoration: underline; text-decoration-color: rgba(67,255,0,1); text-underline-offset: 5px;}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: transparent;
+}
+
+.skill-card2 {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: max-content;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: transparent;
+}
+
+.skill-component {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 16px 50px;
+    border: 1px solid transparent;
+    border-right: 1px solid var(--main-color);
+}
+.skill-component2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 16px 50px;
+    border: 1px solid transparent;
+    border-left: 1px solid rgba(67,255,0,1);
+}
+.skill-component:hover {
+    background-image: url(../icons/grid-point-pattern.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease-in-out;
+    border: 1px solid var(--main-color);
+}
+.skill-component2:hover {
+    background-image: url(../icons/grid-point-pattern.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease-in-out;
+    border: 1px solid rgba(67,255,0,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1280px){
     .hero-title {
