@@ -1,296 +1,44 @@
 :root {
-  /* --main-color: #9eff00; */
-  --main-color: rgba(80, 35, 255, 1);
-  --main-hover-color: rgb(100, 65, 255);
-  --secondary-color: #1b1b1b;
-  --bg-color: rgb(25, 25, 25);
-  --line-color: #212121;
-  --shadow: rgba(80, 35, 255, 0.5);
+    /* --main-color: #9eff00; */
+    --main-color: #beff00;
+    --main-hover-color: rgb(100, 65, 255);
+    --secondary-color: #1b1b1b;
+    --bg-color: rgb(25, 25, 25);
+    --line-color: #212121;
+    --shadow: rgb(190, 255, 0, 0.5);
+    --main-gradient : linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%);;
 }
-
-.my-box-shadow {
-  box-shadow: 2px 2px 4px rgba(160, 255, 0, 0.2);
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-  background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: var(--bg-color);
 }
-
 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* HOVER PULSE EFFECT FOR CONTACT */
-.pulse-effect {
-  z-index: 1;
-  position: relative;
-  font-size: inherit;
-  font-family: inherit;
-  color: white;
-  outline: none;
-}
-
-.pulse-effect:hover {
-  cursor: pointer;
-}
-
-.pulse-effect::before {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border: 1px solid hsl(249, 100%, 61%);
-  border-radius: 8px;
-  transform-origin: center;
-  transform: scale(1);
-}
-
-.pulse-effect:hover::before {
-  transition: all 0.75s ease-in-out;
-  transform-origin: center;
-  transform: scale(1.75);
-  opacity: 0;
-}
-
-/* HOVER BARS FOR "a" */
-.hover-for-a {
-  position: relative;
-}
-
-.hover-for-a::before, .hover-for-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: rgba(80, 35, 255, 1);
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-}
-
-.hover-for-a::before {
-  top: 0;
-  transform-origin: center right;
-}
-
-.hover-for-a:hover::before {
-  transform-origin: center left;
-  transform: scaleX(1);
-}
-
-.hover-for-a::after {
-  bottom: 0;
-  transform-origin: center left;
-}
-
-.hover-for-a:hover::after {
-  transform-origin: center right;
-  transform: scaleX(1);
-}
-
-/* GLITCH TEXT EFFECT */
-.glitch-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: transparent;
-}
-
-.glitch {
-  position: relative;
-  font-size: 50px;
-  font-weight: bold;
-  color: #ffffff;
-  letter-spacing: 3px;
-  z-index: 1;
-}
-
-.glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 100%;
-  color: 50px;
-  background-color: transparent;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-before 3s infinite linear alternate-reverse;
-}
-
-.glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 2px;
-  width: 100%;
-  color: 50px;
-  background-color: transparent;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-after 2s infinite linear alternate-reverse;
-}
-
-@keyframes noise-before {
-  0% {clip: rect(61px, 9999px, 52px, 0);
-  }
-  5% {
-    clip: rect(33px, 9999px, 144px, 0);
-  }
-  10% {
-    clip: rect(121px, 9999px, 115px, 0);
-  }
-  15% {
-    clip: rect(144px, 9999px, 162px, 0);
-  }
-  20% {
-    clip: rect(62px, 9999px, 180px, 0);
-  }
-  25% {
-    clip: rect(34px, 9999px, 42px, 0);
-  }
-  30% {
-    clip: rect(147px, 9999px, 179px, 0);
-  }
-  35% {
-    clip: rect(99px, 9999px, 63px, 0);
-  }
-  40% {
-    clip: rect(188px, 9999px, 122px, 0);
-  }
-  45% {
-    clip: rect(154px, 9999px, 14px, 0);
-  }
-  50% {
-    clip: rect(63px, 9999px, 37px, 0);
-  }
-  55% {
-    clip: rect(161px, 9999px, 147px, 0);
-  }
-  60% {
-clip: rect(109px, 9999px, 175px, 0);
-  }
-  65% {
-clip: rect(157px, 9999px, 88px, 0);
-  }
-  70% {
-clip: rect(173px, 9999px, 131px, 0);
-  }
-  75% {
-clip: rect(62px, 9999px, 70px, 0);
-  }
-  80% {
-clip: rect(24px, 9999px, 153px, 0);
-  }
-  85% {
-clip: rect(138px, 9999px, 40px, 0);
-  }
-  90% {
-clip: rect(79px, 9999px, 136px, 0);
-  }
-  95% {
-clip: rect(25px, 9999px, 34px, 0);
-  }
-  100% {
-clip: rect(173px, 9999px, 166px, 0);
-  }
-}
-
-@keyframes noise-after {
-  0% {
-  clip: rect(26px, 9999px, 33px, 0);
-  }
-  5% {
-  clip: rect(140px, 9999px, 198px, 0);
-  }
-  10% {
-  clip: rect(184px, 9999px, 89px, 0);
-  }
-  15% {
-  clip: rect(121px, 9999px, 6px, 0);
-  }
-  20% {
-  clip: rect(181px, 9999px, 99px, 0);
-  }
-  25% {
-  clip: rect(154px, 9999px, 133px, 0);
-  }
-  30% {
-  clip: rect(134px, 9999px, 169px, 0);
-  }
-  35% {
-  clip: rect(26px, 9999px, 187px, 0);
-  }
-  40% {
-  clip: rect(147px, 9999px, 137px, 0);
-  }
-  45% {
-  clip: rect(31px, 9999px, 52px, 0);
-  }
-  50% {
-  clip: rect(191px, 9999px, 109px, 0);
-  }
-  55% {
-  clip: rect(74px, 9999px, 54px, 0);
-  }
-  60% {
-  clip: rect(145px, 9999px, 75px, 0);
-  }
-  65% {
-  clip: rect(153px, 9999px, 198px, 0);
-  }
-  70% {
-  clip: rect(99px, 9999px, 136px, 0);
-  }
-  75% {
-    clip: rect(118px, 9999px, 192px, 0);
-  }
-  80% {
-    clip: rect(1px, 9999px, 83px, 0);
-  }
-  85% {
-    clip: rect(145px, 9999px, 98px, 0);
-  }
-  90% {
-    clip: rect(121px, 9999px, 154px, 0);
-  }
-  95% {
-    clip: rect(156px, 9999px, 44px, 0);
-  }
-  100% {
-    clip: rect(67px, 9999px, 122px, 0);
-  }
-}
-
-
-/* FONT */
-@font-face {
-  font-family: Barlow-Regular;
-  src: url(../font/Barlow/Barlow-Regular.ttf);
+    text-decoration: none;
+    color: inherit;
 }
 @font-face {
-  font-family: Barlow-Medium;
-  src: url(../font/Barlow/Barlow-Medium.ttf);
+    font-family: Barlow-Regular;
+    src: url(../font/Barlow/Barlow-Regular.ttf);
 }
 @font-face {
-  font-family: Barlow-SemiBold;
-  src: url(../font/Barlow/Barlow-SemiBold.ttf);
+    font-family: Barlow-Medium;
+    src: url(../font/Barlow/Barlow-Medium.ttf);
 }
 @font-face {
-  font-family: Barlow-Bold;
-  src: url(../font/Barlow/Barlow-Bold.ttf);
+    font-family: Barlow-SemiBold;
+    src: url(../font/Barlow/Barlow-SemiBold.ttf);
 }
 @font-face {
-  font-family: Barlow-ExtraBold;
-  src: url(../font/Barlow/Barlow-ExtraBold.ttf);
+    font-family: Barlow-Bold;
+    src: url(../font/Barlow/Barlow-Bold.ttf);
+}
+@font-face {
+    font-family: Barlow-ExtraBold;
+    src: url(../font/Barlow/Barlow-ExtraBold.ttf);
+}
+.glassm-2 {
+    background-color: rgba(51, 51, 51, 0.1);
+    backdrop-filter: blur(2px) saturate(0%);
 }
