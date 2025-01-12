@@ -1,17 +1,22 @@
 * {margin: 0; padding: 0;}
-body {min-height: 100vh; background-image: url(./red-planet.jpg); background-size: cover;background-repeat: no-repeat;background-position: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 /* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
 nav {
     background-color: var(--bg-color);
     height: 100px;
     max-height: 100px;
     display: flex;
     align-items: center;
-    z-index: 998;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 3px 3px 5px var(--main-color);
+    box-shadow: 2px 2px 20px 10px var(--shadow);
 }
 
 nav ul {

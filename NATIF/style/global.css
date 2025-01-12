@@ -5,6 +5,7 @@
   --secondary-color: #1b1b1b;
   --bg-color: rgb(25, 25, 25);
   --line-color: #212121;
+  --shadow: rgba(80, 35, 255, 0.5);
 }
 
 .my-box-shadow {
