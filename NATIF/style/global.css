@@ -39,6 +39,6 @@ a {
     src: url(../font/Barlow/Barlow-ExtraBold.ttf);
 }
 .glassm-2 {
-    background-color: rgba(51, 51, 51, 0.1);
+    background-color: rgba(51, 51, 51, 0);
     backdrop-filter: blur(2px) saturate(0%);
 }

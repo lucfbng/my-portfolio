@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/custom.css">
     <link rel="stylesheet" href="./style/global.css">
-    <script src="./ressources/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./ressources/script.js"></script>
     <title>Luc | Portfolio</title>
 </head>
 
@@ -22,13 +23,13 @@
                 <li><a href="#">Un Logo</a></li>
                 <li><a href="#parcours" id="teste">Mon parcours</a></li>
                 <li><a href="#skill">Mes compétences</a></li>
-                <li><a href="#">Mes projets</a></li>
+                <li><a href="#project">Mes projets</a></li>
             </ul>
             <ul>
                 <li><a href="#">Un Logo</a></li>
                 <li class="hideOnMobile"><a href="#parcours">Mon parcours</a></li>
                 <li class="hideOnMobile"><a href="#skill">Mes compétences</a></li>
-                <li class="hideOnMobile"><a href="#">Mes projets</a></li>
+                <li class="hideOnMobile"><a href="#project">Mes projets</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                             <path d="M120-280v-80h560v80H120Zm80-160v-80h560v80H200Zm80-160v-80h560v80H280Z" />
@@ -47,7 +48,7 @@
     <div class="parcours-section" id="parcours">
         <h2>Mon parcours</h2>
     </div>
-    <section class="design-section">
+    <section class="design-section" data-aos="fade-left" data-aos-duration="3000">
         <div class="timeline">
             <div class="timeline-empty"></div>
             <div class="timeline-middle">
@@ -109,74 +110,91 @@
     </div>
     <!--  -->
     <section class="skill-section">
-        <div class="skill-card">
+        <div class="skill-card" id="leftskill" data-aos="fade-down">
             <h2>HARD SKILLS</h2>
-            <div class="skill-component" id="leftskill">
+            <div class="skill-component">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">HTML</h3>
             </div>
-            <div class="skill-component" id="leftskill"> 
+            <div class="skill-component"> 
                 <img class="skill-icon" src="./icons/css-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">CSS</h3>
             </div>
-            <div class="skill-component" id="leftskill">
+            <div class="skill-component">
                 <img class="skill-icon" src="./icons/js-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">JAVASCRIPT</h3>
             </div>
-            <div class="skill-component" id="leftskill">
+            <div class="skill-component">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">TAILWIND</h3>
             </div>
-            <div class="skill-component" id="leftskill">
+            <div class="skill-component">
                 <img class="skill-icon" src="./icons/bootstrap-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">BOOTSTRAP</h3>
             </div>
-            <div class="skill-component" id="leftskill">
+            <div class="skill-component">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">GIT</h3>
             </div>
         </div>  
         <!--  -->
-        <div class="skill-card2">
+        <div class="skill-card2" id="rightskill" data-aos="fade-down">
             <h2>SOFT SKILLS</h2>
-            <div class="skill-component2" id="rightskill">
+            <div class="skill-component2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ESPRIT D'EQUIPE</h3>
             </div>
-            <div class="skill-component2" id="rightskill">
+            <div class="skill-component2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">AUTONOMIE</h3>
             </div>
-            <div class="skill-component2" id="rightskill">
+            <div class="skill-component2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ADAPTATION</h3>
             </div>
-            <div class="skill-component2" id="rightskill">
+            <div class="skill-component2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">SENS DU DETAIL</h3>
             </div>
         </div>
     </section>
-    <div class="parcours-section" id="skill">
+    <div class="parcours-section" id="project">
         <h2>Mes Projets</h2>
     </div>
     <section class="project-container">
         <div class="project">
-            <span>#HTML</span>
-            <span>#CSS</span>
-            <span>#JAVASCRIPT</span>
-            <span>#PHP</span>
             <h6>MNS Hackaton - Escape Game</h6>
-                <div>
-                    <a href="#">Voir le site</a>
-                </div>
+            <div class="pj-language glassm-2">
+                <span>Languages utilisés :</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JAVASCRIPT</span>
+                <span>PHP</span>
+            </div>
+            <div class="pj-language glassm-2">
+                <span>Ce que j'ai fais :</span>
+                <span>Tout le HTML/CSS du site jusqu'au jeu</span>
+            </div>
+            <a class="pj1-link" href="#">Voir le site<img src="./icons/arrow-right-white.svg" alt="site-link"></a>
         </div>
-        <div class="project2">
+        <div class="project">
             <h6>Mon permier site</h6>
-        </div>
-        <div class="project3">
-            <h6>MNS Hackaton - Escape Game</h6>
+            <div class="pj-language glassm-2">
+                <span>Languages utilisés :</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+            <div class="pj-language glassm-2">
+                <span>Ce que j'ai fais :</span>
+                <span>Tout le HTML/CSS du site</span>
+            </div>
+            <a class="pj1-link" href="#">Voir le site<img src="./icons/arrow-right-white.svg" alt="site-link"></a>
         </div>
     </section>
+
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
