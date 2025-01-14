@@ -36,4 +36,4 @@ document.querySelectorAll('#rightskill').forEach((e) => {
         document.getElementsByClassName('skill-section')[0].style.backgroundSize = 'cover'
         document.getElementsByClassName('skill-section')[0].style.backgroundRepeat = 'no-repeat' 
     })
-})
+}) 

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/custom.css">
     <link rel="stylesheet" href="./style/global.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="./ressources/script.js" async></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./ressources/script.js"></script>
     <title>Luc | Portfolio</title>
 </head>
 
@@ -15,7 +16,7 @@
     <header>
         <nav>
             <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                             viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                             <path
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -37,7 +38,7 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
+    <section class="hero" data-aos="fade-left">
         <div class="hero-title">
             <H2>Bienvenue sur le</H2>
             <H1>PORTFOLIO DE LUC</H1>
@@ -48,7 +49,7 @@
     <div class="parcours-section" id="parcours">
         <h2>Mon parcours</h2>
     </div>
-    <section class="design-section" data-aos="fade-left" data-aos-duration="3000">
+    <section class="design-section">
         <div class="timeline">
             <div class="timeline-empty"></div>
             <div class="timeline-middle">
@@ -109,8 +110,8 @@
         <h2>Mes Compétences</h2>
     </div>
     <!--  -->
-    <section class="skill-section">
-        <div class="skill-card" id="leftskill" data-aos="fade-down">
+    <section class="skill-section" data-aos="fade-down">
+        <div class="skill-card" id="leftskill" >
             <h2>HARD SKILLS</h2>
             <div class="skill-component">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
@@ -138,7 +139,7 @@
             </div>
         </div>  
         <!--  -->
-        <div class="skill-card2" id="rightskill" data-aos="fade-down">
+        <div class="skill-card2" id="rightskill">
             <h2>SOFT SKILLS</h2>
             <div class="skill-component2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
@@ -192,9 +193,8 @@
         </div>
     </section>
 
-
     <script>
         AOS.init();
-    </script>
+      </script>
 </body>
 </html>
