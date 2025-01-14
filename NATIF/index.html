@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/custom.css">
     <link rel="stylesheet" href="./style/global.css">
-    <script src="./ressources/script.js"></script>
+    <script src="./ressources/script.js" defer></script>
     <title>Luc | Portfolio</title>
 </head>
 
@@ -20,7 +20,7 @@
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></a></li>
                 <li><a href="#">Un Logo</a></li>
-                <li><a href="#parcours">Mon parcour</a></li>
+                <li><a href="#parcours" id="teste">Mon parcours</a></li>
                 <li><a href="#skill">Mes compétences</a></li>
                 <li><a href="#">Mes projets</a></li>
             </ul>
@@ -107,52 +107,75 @@
     <div class="parcours-section" id="skill">
         <h2>Mes Compétences</h2>
     </div>
+    <!--  -->
     <section class="skill-section">
         <div class="skill-card">
             <h2>HARD SKILLS</h2>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">HTML</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill"> 
                 <img class="skill-icon" src="./icons/css-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">CSS</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill">
                 <img class="skill-icon" src="./icons/js-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">JAVASCRIPT</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">TAILWIND</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill">
                 <img class="skill-icon" src="./icons/bootstrap-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">BOOTSTRAP</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component" id="leftskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">GIT</h3>
             </div>
-        </div>
+        </div>  
+        <!--  -->
         <div class="skill-card2">
             <h2>SOFT SKILLS</h2>
-            <div class="skill-component2">
+            <div class="skill-component2" id="rightskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ESPRIT D'EQUIPE</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2" id="rightskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">AUTONOMIE</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2" id="rightskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ADAPTATION</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2" id="rightskill">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">SENS DU DETAIL</h3>
             </div>
+        </div>
+    </section>
+    <div class="parcours-section" id="skill">
+        <h2>Mes Projets</h2>
+    </div>
+    <section class="project-container">
+        <div class="project">
+            <span>#HTML</span>
+            <span>#CSS</span>
+            <span>#JAVASCRIPT</span>
+            <span>#PHP</span>
+            <h6>MNS Hackaton - Escape Game</h6>
+                <div>
+                    <a href="#">Voir le site</a>
+                </div>
+        </div>
+        <div class="project2">
+            <h6>Mon permier site</h6>
+        </div>
+        <div class="project3">
+            <h6>MNS Hackaton - Escape Game</h6>
         </div>
     </section>
 </body>

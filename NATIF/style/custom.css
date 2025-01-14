@@ -10,8 +10,8 @@ header {
 }
 nav {
     background-color: transparent;
-    height: 100px;
-    max-height: 100px;
+    height: 80px;
+    max-height: 80px;
     display: flex;
     align-items: center;
     box-shadow: 0px -15px 30px 2px var(--main-color);
@@ -24,6 +24,7 @@ nav ul {
     justify-content: flex-end;
     align-items: center;
     margin: 0px auto;
+
 }
 
 nav li {
@@ -37,6 +38,7 @@ nav a {
     display: flex;
     align-items: center;
     color: rgb(202, 202, 202);
+    font-family: Barlow-Regular;
 }
 
 nav a:hover {
@@ -231,7 +233,7 @@ nav li:first-child {
 
 /* SKILL SECTION */
 .skill-section {
-    background-image: url(../icons/skelleton-with-brain.svg);
+    background-image: url(../images/skelleton-no-color.svg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -307,15 +309,60 @@ nav li:first-child {
     transition: 1s ease-in-out;
     border: 1px solid rgba(67,255,0,1);
 }
+/*__________________________________________________________________________________________________________________________*/
+/* PROJECT SECTION */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 50px;
+    gap: 50px;
+}
 
+.project {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-image: url(../images/hackaton-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px auto;
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid orange;
+}
 
+.project h6 {
+    font-family: Barlow-Bold;
+    font-size: 3rem;
+    margin-left: 2%;
+    color: orange;
+    background: transparent;
+}
 
+.project:hover {
+    height: 100vh;
+    filter: hue-rotate(0deg);
+    border: 1px solid orange;
+}
+.project:hover h6 {
+    display: none;
+}
 
+.project span {display: none; color: white;}
+.project a {display: none;}
 
-
-
-
-
+.project:hover span {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: black;
+    margin-bottom: 50px;
+    padding: 12px 22px;
+}
 
 
 
