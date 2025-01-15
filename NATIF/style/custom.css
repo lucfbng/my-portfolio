@@ -32,6 +32,7 @@ nav li {
 }
 
 nav a {
+    transition: 0.5s ease-in-out;
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -169,6 +170,7 @@ nav li:first-child {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    font-family: Barlow-SemiBold;
 }
 .parcours-section h2 {color: white; background: transparent; font-size: 2rem;}
 /*__________________________________________________________________________________________________________________________*/
@@ -243,7 +245,7 @@ nav li:first-child {
     margin: 50px auto 0 auto;
     max-width: 90%;
     width: 90%;
-    height: 70vh;
+    height: 80vh;
 }
 
 .skill-icon {width: 30px; background: transparent;}
@@ -254,20 +256,22 @@ nav li:first-child {
 .skill-card {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: max-content;
     flex-wrap: wrap;
     gap: 10px;
     background: transparent;
+    font-family: Barlow-Regular;
 }
 
 .skill-card2 {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: max-content;
     height: max-content;
     flex-wrap: wrap;
     gap: 10px;
     background: transparent;
+    font-family: Barlow-Regular;
 }
 
 .skill-component {
@@ -278,10 +282,11 @@ nav li:first-child {
     align-items: center;
     border-radius: 10px;
     gap: 10px;
-    padding: 16px 50px;
+    padding: 12px 30px;
     border: 1px solid transparent;
     border-right: 1px solid var(--main-color);
 }
+
 .skill-component2 {
     width: 100%;
     display: flex;
@@ -290,7 +295,7 @@ nav li:first-child {
     align-items: center;
     border-radius: 10px;
     gap: 10px;
-    padding: 16px 50px;
+    padding: 12px 30px;
     border: 1px solid transparent;
     border-left: 1px solid rgba(67,255,0,1);
 }
@@ -372,7 +377,7 @@ nav li:first-child {
 .project a {display: none;}
 
 .project:hover .pj-language {
-    transition: 1s ease-in-out;
+    transition-duration: 5s;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -444,10 +449,12 @@ nav li:first-child {
 
 
 @media screen and (max-width: 1280px){
+
     .hero-title {
         margin-top: 300px;
         gap: 20px;
     }
+
     .hero-title h1 {
         font-size: 3rem;
     }
@@ -463,14 +470,28 @@ nav li:first-child {
     .github-icon {
         width: 25px;
     }
+
     .git-button {
         padding: 10px 32px;
         font-size: 1rem;
         margin-top: 50px;
     }
+
     .parcours-section h2 {font-size: 1.5rem;}
     .timeline-component h3 {font-size: 1rem;}
     .timeline-component p {font-size: 0.75rem;}
+
+    .skill-section {
+        height: 80vh;
+    }
+
+    .skill-component {
+        font-size: 0.75rem;
+    }
+    
+    .skill-component2 {
+        font-size: 0.75rem;
+    }
 }
 @media screen and (max-width: 1280px){
     .hero {
@@ -483,16 +504,66 @@ nav li:first-child {
 
     }
 }
-@media screen and (max-width: 1280px){
-    .hero {
-        background-image: url(../images/Abstract-Design.svg);
-        background-size: 200%;
-    }
-    .design-section {
-        background-image: url(../images/Abstract-Design-reverse.svg);
-        background-size: 200%;
+@media screen and (max-width: 768px){
+.skill-section {
+    height: 50vh;
+}
 
-    }
+.skill-icon {width: 20px;}
+
+.skill-card {
+    gap: 5px;
+}
+
+.skill-card2 {
+    gap: 5px;
+}
+
+.skill-component {
+    gap: 5px;
+    padding: 12px 25px;
+}
+
+.skill-component2 {
+    gap: 5px;
+    padding: 12px 25px;
+}
+
+.hero {
+    background-image: url(../images/Abstract-Design.svg);
+    background-size: 200%;
+}
+
+.design-section {
+    background-image: url(../images/Abstract-Design-reverse.svg);
+    background-size: 200%;
+}
+
+.project {
+    background-size: cover;
+    height: 150px;
+}
+
+.project h6 {
+    font-size: 1.5rem;
+}
+
+.pj-language span {
+    font-size: 0.75rem;
+}
+
+.project:hover a {
+    font-size: 0.75rem;
+}
+.project:hover a img {
+    width: 15px;
+    background: transparent;
+}
+
+.pj-language span:nth-child(2) {padding: 8px 25px;}
+.pj-language span:nth-child(3) {padding: 8px 25px;}
+.pj-language span:nth-child(4) {padding: 8px 25px;}
+.pj-language span:nth-child(5) {padding: 8px 25px;}
 }
 
 

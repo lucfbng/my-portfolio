@@ -16,7 +16,7 @@
     <header>
         <nav>
             <ul class="sidebar">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                <li onclick="hideSidebar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                             viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                             <path
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
@@ -31,14 +31,14 @@
                 <li class="hideOnMobile"><a href="#parcours">Mon parcours</a></li>
                 <li class="hideOnMobile"><a href="#skill">Mes compétences</a></li>
                 <li class="hideOnMobile"><a href="#project">Mes projets</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                             <path d="M120-280v-80h560v80H120Zm80-160v-80h560v80H200Zm80-160v-80h560v80H280Z" />
                         </svg></a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero" data-aos="fade-left">
+    <section class="hero" data-aos="zoom-out-down" data-aos-duration="1000">
         <div class="hero-title">
             <H2>Bienvenue sur le</H2>
             <H1>PORTFOLIO DE LUC</H1>
@@ -55,12 +55,12 @@
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
-            <div class="timeline-component timeline-content glassm-2">
+            <div class="timeline-component timeline-content glassm-2" data-aos="fade-left" data-aos-duration="2000">
                 <h3 class="timeline-date">2016</h3>
                 <h3 class="timeline-job">CAP Conducteur d'Installation de Production</h3>
                 <p><img class="location-icon" src="./icons/location-green.svg" alt="">Lycée Henri Nominé, Sarreguemines</p>
             </div>
-            <div class="timeline-component timeline-content glassm-2">
+            <div class="timeline-component timeline-content glassm-2" data-aos="fade-right" data-aos-duration="1750">
                 <h3 class="timeline-date">2018</h3>
                 <h3 class="timeline-job">BAC PRO Technicien d'usinage en alternance</h3>
                 <p><img class="location-icon" src="./icons/location-green.svg" alt="">CFAI, Henriville</p>
@@ -75,7 +75,7 @@
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
-            <div class=" timeline-component timeline-content glassm-2">
+            <div class=" timeline-component timeline-content glassm-2" data-aos="fade-left" data-aos-duration="1500">
                 <h3 class="timeline-date">2019</h3>
                 <h3 class="timeline-job" >Technicien d'usinage</h3>
                 <p><img class="location-icon" src="./icons/location-green.svg" alt="">VWB Gersheim, Allemagne</p>
@@ -83,7 +83,7 @@
         </div>
         </div>
         <div class="timeline">
-            <div class="timeline-component timeline-content">
+            <div class="timeline-component timeline-content glassm-2" data-aos="fade-right" data-aos-duration="1250">
                 <h3 class="timeline-date">2021</h3>
                 <h3 class="timeline-job">Technicien d'usinage</h3>
                 <p><img class="location-icon" src="./icons/location-green.svg" alt="">KUHN, Saverne</p>
@@ -98,7 +98,7 @@
             <div class="timeline-middle">
                 <div class="timeline-circle"></div>
             </div>
-            <div class="timeline-component timeline-content">
+            <div class="timeline-component timeline-content glassm-2" data-aos="fade-left" data-aos-duration="1000">
                 <h3 class="timeline-date">2024</h3>
                 <h3 class="timeline-job">Formation Dev Web</h3>
                 <p><img class="location-icon" src="./icons/location-green.svg" alt="">Metz Numeric School</p>
@@ -106,54 +106,54 @@
         </div>
         </div>
     </section>
-    <div class="parcours-section" id="skill">
+    <div class="parcours-section">
         <h2>Mes Compétences</h2>
     </div>
     <!--  -->
-    <section class="skill-section" data-aos="fade-down">
-        <div class="skill-card" id="leftskill" >
+    <section class="skill-section" id="skill" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">
+        <div class="skill-card" id="leftskill" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-center">
             <h2>HARD SKILLS</h2>
-            <div class="skill-component">
+            <div class="skill-component glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">HTML</h3>
             </div>
-            <div class="skill-component"> 
+            <div class="skill-component glassm-2"> 
                 <img class="skill-icon" src="./icons/css-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">CSS</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component glassm-2">
                 <img class="skill-icon" src="./icons/js-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">JAVASCRIPT</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">TAILWIND</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component glassm-2">
                 <img class="skill-icon" src="./icons/bootstrap-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">BOOTSTRAP</h3>
             </div>
-            <div class="skill-component">
+            <div class="skill-component glassm-2 glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">GIT</h3>
             </div>
         </div>  
         <!--  -->
-        <div class="skill-card2" id="rightskill">
+        <div class="skill-card2" id="rightskill" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-center">
             <h2>SOFT SKILLS</h2>
-            <div class="skill-component2">
+            <div class="skill-component2 glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ESPRIT D'EQUIPE</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2 glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">AUTONOMIE</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2 glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">ADAPTATION</h3>
             </div>
-            <div class="skill-component2">
+            <div class="skill-component2 glassm-2">
                 <img class="skill-icon" src="./icons/html-logo-white.svg" alt="html-logo">
                 <h3 class="skill-name">SENS DU DETAIL</h3>
             </div>
@@ -187,7 +187,7 @@
             </div>
             <div class="pj-language glassm-2">
                 <span>Ce que j'ai fais :</span>
-                <span>Tout le HTML/CSS du site</span>
+                <span>Tout le site</span>
             </div>
             <a class="pj1-link" href="#">Voir le site<img src="./icons/arrow-right-white.svg" alt="site-link"></a>
         </div>

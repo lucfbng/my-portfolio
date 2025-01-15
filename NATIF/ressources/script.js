@@ -8,6 +8,10 @@ function hideSidebar() {
     sidebar.style.display = 'none'
 }
 
+document.querySelectorAll('#skill').forEach((e) => { 
+    document.getElementsByClassName('skill-section')[0].style.backgroundImage = 'url(images/skelleton-no-color.svg)'
+})
+
 document.querySelectorAll('#leftskill').forEach((e) => { 
     e.addEventListener('mouseover', () => {
     document.getElementsByClassName('skill-section')[0].style.backgroundImage = 'url(images/skelleton-color-left.svg)'
