@@ -1,6 +1,6 @@
 :root {
     /* --main-color: #9eff00; */
-    --main-color: rgb(190, 255, 0);
+    --main-color: #beff00;
     --main-hover-color: rgb(100, 65, 255);
     --secondary-color: #1b1b1b;
     --bg-color: rgb(25, 25, 25);
@@ -40,7 +40,12 @@ a {
     font-family: Barlow-ExtraBold;
     src: url(../font/Barlow/Barlow-ExtraBold.ttf);
 }
+
 .glassm-2 {
     background-color: rgba(51, 51, 51, 0);
     backdrop-filter: blur(2px) saturate(0%);
+}
+.glassm {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
