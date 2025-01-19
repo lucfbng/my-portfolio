@@ -3,10 +3,10 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 header {
     position: fixed;
     width: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
     top: 0;
     z-index: 99;
-    
+
 }
 nav {
     background-color: transparent;
@@ -14,7 +14,7 @@ nav {
     max-height: 80px;
     display: flex;
     align-items: center;
-    box-shadow: 0px -15px 30px 2px var(--main-color);
+    box-shadow: 0 -15px 30px 2px var(--main-color);
 }
 
 nav ul {
@@ -23,7 +23,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 0px auto;
+    margin: 0 auto;
 
 }
 
@@ -39,7 +39,7 @@ nav a {
     display: flex;
     align-items: center;
     color: rgb(202, 202, 202);
-    font-family: Barlow-Regular;
+    font-family: Barlow-Regular, serif;
 }
 
 nav a:hover {
@@ -101,7 +101,7 @@ nav li:first-child {
     background-repeat: no-repeat;
     background-position: center bottom;
     display: flex;
-    margin: 0px auto 0px auto;
+    margin: 0 auto 0 auto;
     height: 100vh;
     justify-content: center;
     width: 100%;
@@ -118,7 +118,7 @@ nav li:first-child {
 
 .hero-title h1 {
     font-size: 5rem;
-    font-family: Barlow-SemiBold;
+    font-family: Barlow-SemiBold, serif;
     background: linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%);
     background-clip: text;
     color: transparent;
@@ -126,13 +126,13 @@ nav li:first-child {
 
 .hero-title h2 {
     font-size: 3rem;
-    font-family: Barlow-SemiBold;
+    font-family: Barlow-SemiBold, serif;
     background: transparent;
 }
 
 .hero-title h3 {
     font-size: 2rem;
-    font-family: Barlow-SemiBold;
+    font-family: Barlow-SemiBold, serif;
     background: transparent;
 }
 
@@ -147,7 +147,7 @@ nav li:first-child {
     padding: 12px 40px;
     color: black;
     background-color: white;
-    font-family: Barlow-Medium;
+    font-family: Barlow-Medium, serif;
     font-size: 1.25rem;
     border-radius: 100px;
     margin-top: 100px;
@@ -170,7 +170,7 @@ nav li:first-child {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    font-family: Barlow-SemiBold;
+    font-family: Barlow-SemiBold, serif;
 }
 .parcours-section h2 {color: white; background: transparent; font-size: 2rem;}
 /*__________________________________________________________________________________________________________________________*/
@@ -191,20 +191,20 @@ nav li:first-child {
     width: 400px;
     height: 400px;
     border-radius: 30px;
-    box-shadow: 0px 0px 25px 0px black;
+    box-shadow: 0 0 25px 0 black;
     border: 1px solid white;
 }
 
 .about-p {
     border-radius: 15px;
     border: 1px solid var(--main-color);
-    box-shadow: 0px 0px 25px 0px black;
+    box-shadow: 0 0 25px 0 black;
 }
 
 .about div p {
     width: 600px;
     padding: 25px;
-    font-family: Barlow-Regular;
+    font-family: Barlow-Regular, serif;
     font-size: 1.5rem;
     color: white;
     background: transparent;
@@ -247,28 +247,30 @@ nav li:first-child {
 .timeline-empty{background: transparent;}
 
 .timeline-content {
-    margin: 0.25rem;
-    margin-bottom: 20px;
+    margin: 0.25rem 0.25rem 20px;
     padding: 0.5rem 1.75rem 1rem 1.75rem;
     background-color: transparent;
     -webkit-box-shadow: 5px 5px 2px 1px #1a1a1a, -5px -5px 2px 1px #242424;
     box-shadow: 1px 1px 2px 1px #43ff00, -1px -1px 2px 1px var(--main-color);
     border-radius: 5px;
     color: white;
-    font-family: Barlow-SemiBold;
+    font-family: Barlow-SemiBold, serif;
     transition: 0.4s ease;
     overflow-wrap: break-word !important;
 }
 
 .timeline-component {
-    margin: 0px 20px 20px 20px;
+    margin: 0 20px 20px 20px;
     background-color: transparent;
 }
 
-.timeline-date {font-family: Barlow-ExtraBold; font-size: 3rem; margin-bottom: 1%; background: linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%); background-clip: text; color: transparent;}
+.timeline-date {
+    font-family: Barlow-ExtraBold, serif; font-size: 3rem; margin-bottom: 1%; background: linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%); background-clip: text; color: transparent;}
 .location-icon {width: 15px; background: transparent; margin-right: 5px;}
-.timeline-job {font-family: Barlow-Medium; background: transparent; margin-bottom: 10px;}
-.timeline-component p {font-family: Barlow-Regular; background: transparent;}
+.timeline-job {
+    font-family: Barlow-Medium, serif; background: transparent; margin-bottom: 10px;}
+.timeline-component p {
+    font-family: Barlow-Regular, serif; background: transparent;}
 /*__________________________________________________________________________________________________________________________*/
 
 /* SKILL SECTION */
@@ -297,7 +299,7 @@ nav li:first-child {
     flex-wrap: wrap;
     gap: 10px;
     background: transparent;
-    font-family: Barlow-Regular;
+    font-family: Barlow-Regular, serif;
 }
 
 .skill-card2 {
@@ -308,7 +310,7 @@ nav li:first-child {
     flex-wrap: wrap;
     gap: 10px;
     background: transparent;
-    font-family: Barlow-Regular;
+    font-family: Barlow-Regular, serif;
 }
 
 .skill-component {
@@ -492,8 +494,8 @@ nav li:first-child {
 }
 
 .footer-container ul li {
-    font-family: Barlow-Regular;
-    font-size: 1rem; 
+    font-family: Barlow-Regular, serif;
+    font-size: 1rem;
 }
 .footer-container ul li:hover {
     text-decoration: underline;
@@ -510,15 +512,15 @@ nav li:first-child {
     .hero-title h1 {
         font-size: 3rem;
     }
-    
+
     .hero-title h2 {
         font-size: 2rem;
     }
-    
+
     .hero-title h3 {
         font-size: 1.5rem;
     }
-    
+
     .github-icon {
         width: 25px;
     }
@@ -540,7 +542,7 @@ nav li:first-child {
     .skill-component {
         font-size: 0.75rem;
     }
-    
+
     .skill-component2 {
         font-size: 0.75rem;
     }
