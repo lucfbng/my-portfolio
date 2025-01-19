@@ -1,12 +1,12 @@
 :root {
     /* --main-color: #9eff00; */
-    --main-color: #beff00;
+    --main-color: rgb(190, 255, 0);
     --main-hover-color: rgb(100, 65, 255);
     --secondary-color: #1b1b1b;
     --bg-color: rgb(25, 25, 25);
     --line-color: #212121;
     --shadow: rgb(190, 255, 0, 0.5);
-    --main-gradient : linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%);;
+    --main-gradient : linear-gradient(45deg, rgba(190,255,0,1) 0%, rgba(67,255,0,1) 100%);
 }
 
 * {
