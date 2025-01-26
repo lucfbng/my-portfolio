@@ -1,0 +1,369 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: max-content;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  width: 1400px;
+  max-height: 25px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border-left: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  position: relative;
+  top: 0px;
+}
+
+nav > div ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "hero"
+    "about"
+    "parcours"
+    "work";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1000px 400px auto auto;
+}
+
+.hero-left {
+  grid-area: hero-left;
+  padding: 250px 0 0 50px;
+}
+.hero-right {
+  grid-area: hero-right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: url(../asset/img/Vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+
+.about-left {
+  grid-area: about-left;
+}
+.about-right {
+  grid-area: about-right;
+  display: flex;
+  justify-content: end;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+.hero {
+  display: grid;
+  grid-template-areas: "hero-left hero-right";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  font-size: 2rem;
+}
+
+.hero a {
+  /* GITHUB BUTTON */
+  display: block;
+  margin-top: 50px;
+  width: max-content;
+  padding: 12px 24px;
+  font-size: 1.25rem;
+  background-color: var(--font-color);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+.hero img {
+  width: 100%;
+}
+
+.about {
+  display: grid;
+  grid-template-areas: "about-left about-right";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: start;
+  background-color: var(--bg-color);
+  margin: 0 50px;
+}
+
+.about-right img {
+  width: 400px;
+  padding: 0 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--main-color);
+}
+
+.about p {
+  padding: 50px;
+  background-color: var(--bg-color);
+  border-left: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  border-radius: 5px;
+  line-height: 25px;
+}
+
+.parcours {
+  display: grid;
+  grid-template-areas: "parcours-title parcours-timeline";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parcours-title {
+  height: 100%;
+  grid-area: parcours-title;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--secondary-color);
+  border-right: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--secondary-color);
+  border-top: 3px solid var(--main-color);
+  border-top-right-radius: 1200px;
+  border-bottom-right-radius: 4000px;
+  margin-right: 400px;
+}
+
+.parcours-title span {
+  position: sticky;
+  top: 75px;
+  font-size: 3em;
+  margin: 0 auto;
+}
+.parcours-title img {
+  position: sticky;
+  top: 0px;
+  width: 80px;
+  margin: 100px auto 0 auto;
+}
+
+.parcours-timeline > p > span:first-child {
+  color: var(--main-color);
+  font-family: Geist-SemiBold;
+  font-size: 2.25rem;
+}
+.parcours-timeline > p > span:last-child {
+  font-family: Geist-SemiBold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-color: var(--main-color);
+  text-underline-offset: 8px;
+}
+
+/* TIMELINE */
+.parcours-timeline {
+  grid-area: parcours-timeline;
+  margin-right: 50px;
+}
+
+.parcours-timeline p {
+  font-size: 1em;
+  border-top: 3px solid;
+  border-image: linear-gradient(
+    to right,
+    var(--secondary-color) 0%,
+    var(--main-color) 100%
+  );
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 100px;
+  counter-increment: section;
+  position: relative;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  /* Numbers */
+  &:before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: var(--main-color);
+    text-align: center;
+    color: var(--bg-color);
+    font-size: 1rem;
+  }
+}
+/* Odd number borders */
+.parcours-timeline p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+
+  &:before {
+    left: 100%;
+    margin-left: -20px;
+  }
+}
+/* Even number borders */
+.parcours-timeline p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+
+  &:before {
+    right: 100%;
+    margin-right: -20px;
+  }
+}
+/* Handle first and last */
+.parcours-timeline p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.parcours-timeline p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*____________________________________________________________________________________________________________________________________________________________*/
+
+.work {
+  display: grid;
+  grid-template-areas: "work-timeline work-title";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.work-title {
+  height: 100%;
+  grid-area: work-title;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: end;
+  background-color: var(--secondary-color);
+  border-top: 3px solid var(--main-color);
+  border-left: 3px solid var(--secondary-color);
+  border-bottom: 3px solid var(--main-color);
+  border-bottom-left-radius: 4000px;
+  border-top-left-radius: 1200px;
+  margin-left: 400px;
+}
+
+.work-title span {
+  position: sticky;
+  top: 0;
+  font-size: 3em;
+  margin: 100px auto 0 auto;
+}
+.work-title img {
+  position: sticky;
+  top: 60px;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.work-timeline > p > span:first-child {
+  color: var(--main-color);
+  font-family: Geist-SemiBold;
+  font-size: 2.25rem;
+}
+.work-timeline > p > span:last-child {
+  font-family: Geist-SemiBold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-color: var(--main-color);
+  text-underline-offset: 8px;
+}
+
+/* TIMELINE */
+.work-timeline {
+  grid-area: work-timeline;
+  margin-left: 50px;
+}
+
+.work-timeline p {
+  font-size: 1em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right,var(--secondary-color) 0%,var(--main-color) 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 100px;
+  counter-increment: section;
+  position: relative;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  /* Numbers */
+  &:before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: var(--main-color);
+    text-align: center;
+    color: var(--bg-color);
+    font-size: 1rem;
+  }
+}
+/* Odd number borders */
+.work-timeline p:nth-child(odd) {
+  border-left: 3px solid;
+  padding-right: 0;
+
+  &:before {
+    right: 100%;
+    margin-right: -20px;
+  }
+}
+/* Even number borders */
+.work-timeline p:nth-child(even) {
+  border-right: 3px solid;
+  padding-left: 0;
+
+  &:before {
+    left: 100%;
+    margin-left: -20px;
+  }
+}
+/* Handle first and last */
+.work-timeline p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.work-timeline p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*___________________________________________________________________________________________________________________________________________________________________________*/
+

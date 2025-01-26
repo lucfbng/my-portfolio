@@ -1,0 +1,48 @@
+:root {
+  /* --main-color: #9eff00; */
+  --main-color: #fe5b25;
+  --bg-color: #161616;
+  --main-hover-color: #f05724;
+  --secondary-color: #282828;
+  --font-color: #dbdbdb;
+}
+
+.my-box-shadow {
+  box-shadow: 2px 2px 4px rgba(15, 15, 15, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: Geist-Regular;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* FONT */
+
+@font-face {
+  font-family: Geist-Regular;
+  src: url(../asset/font/GeistMono-Regular.ttf);
+}
+@font-face {
+  font-family: Geist-Medium;
+  src: url(../asset/font/GeistMono-Medium.ttf);
+}
+@font-face {
+  font-family: Geist-SemiBold;
+  src: url(../asset/font/GeistMono-SemiBold.ttf);
+}
+@font-face {
+  font-family: Geist-Bold;
+  src: url(../asset/font/GeistMono-Bold.ttf);
+}
+
