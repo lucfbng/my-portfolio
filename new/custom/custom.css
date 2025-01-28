@@ -3,33 +3,27 @@ body {
   color: var(--font-color);
   display: grid;
   grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   height: max-content;
+  z-index: 10;
 }
 
 header {
   grid-area: header;
   background-color: var(--secondary-color);
   padding: 20px;
-  width: 1400px;
-  max-height: 25px;
+  width: 1000px;
+  max-height: 80px;
   margin: 10px auto;
   border-radius: 5px;
   border-left: 3px solid var(--main-color);
   border-right: 3px solid var(--main-color);
   position: relative;
   top: 0px;
-}
-
-nav > div ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
 }
 
 main {
@@ -39,14 +33,34 @@ main {
     "hero"
     "about"
     "parcours"
-    "work";
+    "work"
+    "competences";
   grid-template-columns: 1fr;
-  grid-template-rows: 1000px 400px auto auto;
+  grid-template-rows: 750px 400px 1300px auto auto;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas:
+  "logo list social";
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--secondary-color);
+  padding: 50px;
+  align-items: center;
+}
+/*_________________________________________________________________________________________________*/
+
+nav > div ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
 }
 
 .hero-left {
   grid-area: hero-left;
-  padding: 250px 0 0 50px;
+  padding: 200px 0 0 50px;
 }
 .hero-right {
   grid-area: hero-right;
@@ -56,7 +70,7 @@ main {
   background-image: url(../asset/img/Vector.svg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 150%;
 }
 
 .about-left {
@@ -75,16 +89,18 @@ footer {
 }
 
 .hero {
+  grid-area: hero;
   display: grid;
   grid-template-areas: "hero-left hero-right";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   grid-template-rows: auto;
   font-size: 2rem;
 }
 
 .hero a {
   /* GITHUB BUTTON */
-  display: block;
+  display: flex;
+  align-items: center;
   margin-top: 50px;
   width: max-content;
   padding: 12px 24px;
@@ -93,13 +109,19 @@ footer {
   color: var(--secondary-color);
   border-radius: 10px;
   border: 1px solid var(--secondary-color);
+  gap: 20px;
+}
+
+.hero a:hover {
+  background-color: #bababa;
 }
 
 .hero img {
   width: 100%;
 }
-
+/*_________________________________________________________________________________________________*/
 .about {
+  grid-area: about;
   display: grid;
   grid-template-areas: "about-left about-right";
   grid-template-columns: 1fr 1fr;
@@ -111,7 +133,7 @@ footer {
 
 .about-right img {
   width: 400px;
-  padding: 0 50px;
+  padding: auto 50px 0 50px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -126,7 +148,7 @@ footer {
   border-radius: 5px;
   line-height: 25px;
 }
-
+/*_________________________________________________________________________________________________*/
 .parcours {
   display: grid;
   grid-template-areas: "parcours-title parcours-timeline";
@@ -149,19 +171,20 @@ footer {
   border-top-right-radius: 1200px;
   border-bottom-right-radius: 4000px;
   margin-right: 400px;
+  padding-bottom: 200px;
 }
 
 .parcours-title span {
   position: sticky;
   top: 75px;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0 auto;
 }
-.parcours-title img {
+.parcours-title svg {
   position: sticky;
   top: 0px;
   width: 80px;
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
 }
 
 .parcours-timeline > p > span:first-child {
@@ -272,18 +295,19 @@ footer {
   border-bottom-left-radius: 4000px;
   border-top-left-radius: 1200px;
   margin-left: 400px;
+  padding-bottom: 250px;
+  z-index: 2;
 }
 
 .work-title span {
   position: sticky;
   top: 0;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 100px auto 0 auto;
 }
-.work-title img {
+.work-title svg {
   position: sticky;
   top: 60px;
-  width: 80px;
   margin: 0 auto;
 }
 
@@ -366,4 +390,69 @@ footer {
   border-bottom-left-radius: 0;
 }
 /*___________________________________________________________________________________________________________________________________________________________________________*/
+
+.competences {
+  grid-area: competences;
+  padding: 50px;
+}
+
+.competences-title {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+  font-size: 3rem;
+}
+.competences-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-end, .back-end, .other{
+  display: flex;
+  gap: 150px;
+  margin-bottom: 100px;
+}
+
+.front-end div, .back-end div, .other div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-e, .front-end + span, .back-end + span {
+  margin-bottom: 60px;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--font-color);
+}
+
+.front-end > div, .back-end > div, .other > div {
+  width: 150px;
+  height: 150px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.front-end > div:hover, .back-end > div:hover, .other > div:hover {
+  background-image: url(../asset/img/Vector.svg);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--main-color);
+  transition: all 0.2s ease-out;
+}
+
+footer > div > ul {
+  display: flex;
+  gap: 30px;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
 

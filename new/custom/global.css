@@ -4,7 +4,7 @@
   --bg-color: #161616;
   --main-hover-color: #f05724;
   --secondary-color: #282828;
-  --font-color: #dbdbdb;
+  --font-color: #c8c8c8;
 }
 
 .my-box-shadow {
@@ -14,7 +14,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-family: Geist-Regular;
 }
 
