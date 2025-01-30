@@ -7,16 +7,15 @@ body {
     "main"
     "footer";
   grid-template-columns: 100%;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
   height: max-content;
-  z-index: 10;
 }
 
 header {
   grid-area: header;
   background-color: var(--secondary-color);
   padding: 20px;
-  width: 1000px;
+  width: 1300px;
   max-height: 80px;
   margin: 10px auto;
   border-radius: 5px;
@@ -35,19 +34,21 @@ main {
     "parcours"
     "work"
     "competences";
-  grid-template-columns: 1fr;
-  grid-template-rows: 750px 400px 1300px auto auto;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, auto);
 }
 
-footer {
-  grid-area: footer;
-  display: grid;
-  grid-template-areas:
-  "logo list social";
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: var(--secondary-color);
-  padding: 50px;
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 25px;
+}
+
+.footer-container ul {
+  display: flex;
+  gap: 80px;
 }
 /*_________________________________________________________________________________________________*/
 
@@ -58,10 +59,20 @@ nav > div ul {
   position: relative;
 }
 
+.hero {
+  grid-area: hero;
+  display: grid;
+  grid-template-areas: "hero-left hero-right";
+  grid-template-columns: 65% 35%;
+  grid-template-rows: auto;
+  font-size: 2rem;
+}
+
 .hero-left {
   grid-area: hero-left;
   padding: 200px 0 0 50px;
 }
+
 .hero-right {
   grid-area: hero-right;
   display: flex;
@@ -80,21 +91,6 @@ nav > div ul {
   grid-area: about-right;
   display: flex;
   justify-content: end;
-}
-
-footer {
-  grid-area: footer;
-  background-color: var(--secondary-color);
-  padding: 20px;
-}
-
-.hero {
-  grid-area: hero;
-  display: grid;
-  grid-template-areas: "hero-left hero-right";
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: auto;
-  font-size: 2rem;
 }
 
 .hero a {
@@ -129,6 +125,16 @@ footer {
   align-items: start;
   background-color: var(--bg-color);
   margin: 0 50px;
+}
+
+.about-left {
+  grid-area: about-left;
+}
+
+.about-right {
+  grid-area: about-right;
+  display: flex;
+  justify-content: end;
 }
 
 .about-right img {
@@ -393,7 +399,7 @@ footer {
 
 .competences {
   grid-area: competences;
-  padding: 50px;
+  padding: 50px 0 0 0;
 }
 
 .competences-title {
@@ -411,6 +417,7 @@ footer {
 
 .front-end, .back-end, .other{
   display: flex;
+  flex-wrap: wrap;
   gap: 150px;
   margin-bottom: 100px;
 }
@@ -422,7 +429,7 @@ footer {
   align-items: center;
 }
 
-.f-e, .front-end + span, .back-end + span {
+.f-e, .front-end + span, .back-end + span, .other + span {
   margin-bottom: 60px;
   font-size: 1.5rem;
   text-decoration: underline;
@@ -446,13 +453,159 @@ footer {
   transition: all 0.2s ease-out;
 }
 
-footer > div > ul {
-  display: flex;
-  gap: 30px;
+
+/* MEDIAQUERRY */
+@media (max-width: 1250px){
+  header {
+    width: 950px;
+  }
+
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "hero"
+      "about"
+      "parcours"
+      "work"
+      "competences";
+    grid-template-columns: 992px;
+    grid-template-rows: 700px 700px 1500px 2000px auto;
+    margin: 0 auto;
+  }
+
+  .hero {
+    grid-template-areas: 
+    "hero-left";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .hero-left {
+    margin: 0;
+    padding: 150px 0 0 50px;
+  }
+
+  .about {
+    grid-template-areas:
+    " about-left " 
+    " about-right ";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 400px;
+  }
+
+  .about-right {
+    justify-content: center;
+  }
+
+  .about-right img {
+    width: 400px;
+    padding: auto 50px 0 50px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+  }
+
+  .about p {
+    padding: 40px;
+  }
+
+  .parcours {
+    grid-template-areas:
+    "parcours-title"
+    "parcours-timeline";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: none;
+    align-items: none;
+  }
+
+  .parcours-title {
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 0px solid var(--secondary-color);
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 30px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+
+  .parcours-timeline {
+    grid-area: parcours-timeline;
+    margin-right: 0px;
+  }
+
+  .work {
+    grid-template-areas:
+    "work-title"
+    "work-timeline";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-bottom: 0px solid var(--main-color);
+  }
+  
+  .work-title {
+    width: 100%;
+    background-color: var(--bg-color);
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 0px solid var(--secondary-color);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+  
+  .work-timeline {
+    grid-area: work-timeline;
+    margin-left: 0px;
+    border-bottom: 3px solid var(--main-color);
+  }
+  
+  .front-end, .back-end, .other{
+    gap: 50px;
+  }
 }
 
-.social {
-  display: flex;
-  justify-content: flex-end;
+@media (max-width: 1050px) {
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "hero"
+      "about"
+      "parcours"
+      "work"
+      "competences";
+    grid-template-columns: 900px;
+    grid-template-rows: 700px 700px 1500px 2000px auto;
+    margin: 0 auto;
+  }
 }
 
+@media (max-width: 950px) {
+  header {
+    width: 763px;
+  }
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+      "hero"
+      "about"
+      "parcours"
+      "work"
+      "competences";
+    grid-template-columns: 763px;
+    grid-template-rows: 700px 700px 1500px 2000px auto;
+    margin: 0 auto;
+  }
+
+  .front-end > div, .back-end > div, .other > div {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 800px)
